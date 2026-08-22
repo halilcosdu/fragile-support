@@ -3,283 +3,267 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fragile - Gizlilik ve Destek</title>
-<meta name="description" content="Fragile için gizlilik politikası ve destek. iPhone ve iPad'e paketleme bulmacası: veri toplanmaz, hesap gerekmez, reklam yoktur, çevrimdışı çalışır.">
-<meta name="theme-color" content="#2A1F3D">
+<title>Fragile - Paketleme Bulmacası | Gizlilik ve Destek</title>
+<meta name="description" content="Fragile, iPhone ve iPad için bir paketleme bulmacası: elle tasarlanmış 80 sipariş, her gün yeni bir teslimat, reklam yok, internet gerekmez. Gizlilik politikası ve destek.">
+<meta name="theme-color" content="#1C1428">
 <link rel="icon" href="icon.png" sizes="256x256">
 <link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="site.css">
 <link rel="canonical" href="https://halilcosdu.github.io/fragile-support/tr.html">
 <link rel="alternate" hreflang="tr" href="https://halilcosdu.github.io/fragile-support/tr.html">
 <link rel="alternate" hreflang="en" href="https://halilcosdu.github.io/fragile-support/">
 <link rel="alternate" hreflang="x-default" href="https://halilcosdu.github.io/fragile-support/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fragile - Gizlilik ve Destek">
-<meta property="og:description" content="Veri toplanmaz, hesap gerekmez, reklam yoktur. Fragile tamamen çevrimdışı çalışır.">
+<meta property="og:title" content="Fragile - Paketleme Bulmacası">
+<meta property="og:description" content="Her oyuncağı sağ salim paketle. Elle tasarlanmış 80 sipariş, reklam yok, çevrimdışı çalışır.">
 <meta property="og:image" content="https://halilcosdu.github.io/fragile-support/icon.png">
-<style>
-  :root {
-    --ink: #2A1F3D;
-    --ink-soft: #372A50;
-    --card: #FFF6E8;
-    --card-edge: #E8D9C2;
-    --text: #453C57;
-    --muted: #6C6280;
-    --gold: #FFD9A8;
-    --orange: #FF7A1A;
-    --orange-deep: #C2571A;
-    --lilac: #B3A8C9;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--ink);
-    color: var(--lilac);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    /* başlığın arkasında yumuşak bir ışık: sayfa düz bir mürekkep duvarı gibi durmasın */
-    background-image: radial-gradient(120% 60% at 50% 0%, #3B2C55 0%, #2A1F3D 60%);
-    background-repeat: no-repeat;
-  }
-  .skip {
-    position: absolute; left: -9999px; top: 0;
-    background: var(--card); color: var(--ink); padding: .7rem 1rem; border-radius: 0 0 12px 0; z-index: 5;
-  }
-  .skip:focus { left: 0; }
-  .wrap { max-width: 47rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
-
-  header { text-align: center; padding: 2.75rem 0 .5rem; }
-  header img { width: min(278px, 72vw); height: auto; display: block; margin: 0 auto; }
-  .eyebrow { color: var(--lilac); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; margin: .9rem 0 0; }
-  h1 { color: var(--gold); font-size: clamp(1.5rem, 5vw, 2rem); margin: .35rem 0 0; letter-spacing: .01em; text-wrap: balance; }
-  .updated { color: #8D82A5; font-size: .9rem; margin: .35rem 0 0; }
-
-  nav.langs { display: flex; justify-content: center; gap: .5rem; margin: 1.4rem 0 .25rem; }
-  nav.langs a {
-    display: inline-block; padding: .42rem 1rem; border-radius: 999px;
-    color: var(--gold); text-decoration: none; font-size: .92rem; font-weight: 600;
-    border: 1px solid rgba(255, 217, 168, .32);
-  }
-  nav.langs a[aria-current="page"] { background: var(--gold); color: var(--ink); border-color: var(--gold); }
-  nav.langs a:hover { border-color: var(--gold); }
-
-  .glance { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem; margin: 1.6rem 0 0; }
-  .glance div {
-    background: rgba(255, 246, 232, .07); border: 1px solid rgba(255, 246, 232, .14);
-    border-radius: 14px; padding: .8rem .9rem; color: #E9E2F3; font-size: .92rem; font-weight: 600;
-    text-wrap: balance;
-  }
-  .glance span { display: block; color: var(--lilac); font-weight: 400; font-size: .85rem; margin-top: .1rem; }
-
-  section {
-    background: var(--card); color: var(--text);
-    border-radius: 20px; padding: 1.6rem 1.7rem;
-    margin: 1.5rem 0 0; box-shadow: 0 6px 0 var(--card-edge);
-  }
-  section > :first-child { margin-top: 0; }
-  section > :last-child { margin-bottom: 0; }
-  h2 { color: var(--ink); font-size: 1.3rem; margin: 0 0 .8rem; }
-  h3 { color: var(--ink); font-size: 1.02rem; margin: 1.5rem 0 .3rem; }
-  p { margin: .6rem 0; }
-  ul { padding-left: 1.15rem; margin: .5rem 0; }
-  li { margin: .3rem 0; }
-  a { color: var(--orange-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:hover { color: var(--orange); }
-  strong { color: var(--ink); }
-  .lede { font-size: 1.06rem; }
-
-  .contact {
-    display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.1rem;
-    background: #FFEFD8; border: 1px solid var(--card-edge); border-radius: 16px;
-    padding: 1rem 1.15rem; margin: 1rem 0 0;
-  }
-  .contact a.mail {
-    background: var(--orange); color: #fff; text-decoration: none; font-weight: 700;
-    padding: .6rem 1.1rem; border-radius: 12px; box-shadow: 0 4px 0 var(--orange-deep);
-  }
-  .contact a.mail:hover { color: #fff; }
-  .contact p { margin: 0; font-size: .95rem; color: var(--muted); }
-
-  details { border-top: 1px solid var(--card-edge); padding: .2rem 0; }
-  details:first-of-type { border-top: 0; }
-  summary { cursor: pointer; padding: .7rem 0; font-weight: 600; color: var(--ink); list-style: none; }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; float: right; color: var(--orange-deep); font-weight: 700; }
-  details[open] summary::after { content: "\2212"; }
-  details p { margin: 0 0 .8rem; }
-
-  table { width: 100%; border-collapse: collapse; margin: .8rem 0 0; font-size: .96rem; }
-  th, td { text-align: left; padding: .55rem .2rem; border-bottom: 1px solid var(--card-edge); vertical-align: top; }
-  th { color: var(--ink); width: 45%; }
-  td { color: var(--muted); }
-
-  footer { text-align: center; color: #8D82A5; font-size: .86rem; padding: 2rem 0 0; }
-  footer a { color: var(--gold); }
-
-  @media (min-width: 40rem) { .glance { grid-template-columns: repeat(4, 1fr); } }
-  @media (max-width: 34rem) {
-    /* the two-column table gets cramped on a phone, so each row stacks instead */
-    section { padding: 1.3rem 1.15rem; }
-    th, td { display: block; width: auto; padding: .3rem 0; }
-    th { border-bottom: 0; padding-top: .75rem; }
-    td { padding-bottom: .75rem; }
-  }
-  @media print {
-    body { background: #fff; color: #000; }
-    section { box-shadow: none; border: 1px solid #ccc; }
-    nav.langs, .skip { display: none; }
-  }
-</style>
 </head>
 <body>
 <a class="skip" href="#main">İçeriğe geç</a>
-<div class="wrap">
 
-<header>
-  <img src="wordmark.png" alt="Fragile" width="556" height="168">
-  <p class="eyebrow">iPhone ve iPad için paketleme bulmacası</p>
-  <h1>Gizlilik ve Destek</h1>
-  <p class="updated">Sürüm 1.0.0 · Son güncelleme 22 Ağustos 2026</p>
-  <nav class="langs" aria-label="Dil">
-    <a href="./" lang="en" hreflang="en">English</a>
-    <a href="tr.html" aria-current="page" lang="tr">Türkçe</a>
-  </nav>
-  <div class="glance">
-    <div>Veri toplanmaz<span>Hiçbir şey cihazdan çıkmaz</span></div>
-    <div>Hesap yok<span>Kayıt olunacak bir yer yok</span></div>
-    <div>Reklam ve satın alma yok<span>Oyunun tamamı, tek seferde</span></div>
-    <div>Çevrimdışı çalışır<span>Ağ erişimi hiç yok</span></div>
+<div class="topbar">
+  <div class="inner">
+    <a href="#main" aria-label="Fragile"><img src="wordmark.png" alt="Fragile" width="556" height="168"></a>
+    <nav aria-label="Bu sayfada">
+      <a href="#screens">Ekranlar</a>
+      <a href="#privacy">Gizlilik</a>
+      <a href="#support">Destek</a>
+      <span class="langs">
+        <a href="./" lang="en" hreflang="en">EN</a>
+        <a href="tr.html" aria-current="page" lang="tr">TR</a>
+      </span>
+    </nav>
   </div>
+</div>
+
+<header class="hero">
+  <img class="wordmark" src="wordmark.png" alt="Fragile" width="556" height="168">
+  <p class="eyebrow">iPhone ve iPad için paketleme bulmacası</p>
+  <h1>Her oyuncağı sağ salim paketle</h1>
+  <p class="lede">Oyuncaklar banttan gelir, önünüzde tek bir kutu vardır ve her siparişin tam olarak
+  bir temiz çözümü olur. Elle tasarlanmış 80 sipariş, her gün yeni bir teslimat ve sizinle bulmaca
+  arasında hiçbir şey.</p>
+  <ul class="chips">
+    <li>Ücretsiz ve tam<span>Reklam ve satın alma yok</span></li>
+    <li>Veri toplanmaz<span>Hiçbir şey cihazdan çıkmaz</span></li>
+    <li>Hesap yok<span>Kayıt olunacak bir yer yok</span></li>
+    <li>Çevrimdışı çalışır<span>Ağ erişimi hiç yok</span></li>
+  </ul>
 </header>
 
 <main id="main">
 
-<section aria-labelledby="privacy">
-  <h2 id="privacy">Gizlilik Politikası</h2>
-  <p class="lede">Fragile hiçbir kişisel veriyi toplamaz, iletmez, satmaz veya paylaşmaz. Uygulamada
-  hesap, giriş, reklam, analitik servis ve üçüncü taraf kod bulunmaz; hiçbir türde ağ isteği
-  yapmaz.</p>
-
-  <h3>Sorumlu kim</h3>
-  <p>Fragile'ı <strong>Halil Cosdu</strong> geliştirir ve yayınlar; bireysel bir geliştiricidir.
-  Bu politikayla ilgili her konu için
-  <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a> adresine yazabilirsiniz.</p>
-
-  <h3>Uygulamanın cihazınızda tuttukları</h3>
-  <p>Hepsi yalnızca Fragile'ın okuyabildiği, uygulamaya ait özel alanda kalır:</p>
-  <table>
-    <tbody>
-      <tr><th>İlerlemeniz</th><td>Tamamlanan siparişler, yıldızlar, günlük seri ve hangi ipuçlarını gördüğünüz</td></tr>
-      <tr><th>Ayarlarınız</th><td>Müzik, ses efektleri, titreşim ve dil</td></tr>
-      <tr><th>Yerel oyun günlüğü</th><td>Bir sorunun cihaz üzerinde teşhis edilebilmesi için yazılan oyun olayları. Kişisel bilgi içermez, boyutu sınırlıdır ve hiçbir yere yüklenmez.</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Cihazınızdan çıkanlar</h3>
-  <p>Hiçbir şey. Uygulamada ağ kodu, reklam veya analitik SDK'sı ve herhangi bir izleme yoktur;
-  yani gönderilecek bir veri de, gideceği bir yer de yok. Oyun uçak modunda baştan sona
-  oynanabilir.</p>
-
-  <h3>Üçüncü taraflar</h3>
-  <p>Yok. Fragile'ın reklam ortağı, analitik sağlayıcısı, çökme bildirimi servisi, sosyal medya veya
-  giriş entegrasyonu bulunmaz. İki yazı tipi uygulamanın içine gömülüdür; çalışma anında hiçbir şey
-  indirilmez.</p>
-
-  <h3>Çocuklar</h3>
-  <p>Oyunun yaş sınırı 4+ ve her yaşa uygundur. Reklam, satın alma, sohbet, kullanıcı içeriği ve
-  uygulama dışına çıkan bağlantı içermez; çocuklar dahil hiç kimseden veri toplamaz.</p>
-
-  <h3>Haklarınız</h3>
-  <p>Hiçbir kişisel veri toplanmadığı ve iletilmediği için 6698 sayılı KVKK ile GDPR kapsamında
-  hakkınızda erişilebilecek, düzeltilebilecek, taşınabilecek veya silinebilecek bir kaydımız
-  bulunmuyor. Yukarıda anlatılan veriler cihazınızda durur ve sizin denetimindedir: uygulamayı
-  silmeniz hepsini kaldırır, başka hiçbir yerde kopyası yoktur.</p>
-
-  <h3>Bu politikadaki değişiklikler</h3>
-  <p>Politika değişirse bu sayfa ve üstteki tarih güncellenir, esaslı bir değişiklik olursa
-  uygulamanın sürüm notlarında da belirtilir. Bu politikanın veri toplayan bir sürümü olmayacak.</p>
-</section>
-
-<section id="support" aria-labelledby="support-title">
-  <h2 id="support-title">Destek</h2>
-  <p>Soru, hata bildirimi ve yeni sipariş fikirleri - hepsi doğrudan oyunu yapan kişiye ulaşır.</p>
-  <div class="contact">
-    <a class="mail" href="mailto:cosduhalil@gmail.com?subject=Fragile%20destek">E-posta gönder</a>
-    <p>cosduhalil@gmail.com · Genellikle iki gün içinde yanıtlıyorum.</p>
+<section id="screens" class="band band-ink">
+  <div class="inner">
+    <h2>Oyunun içinden</h2>
+    <p class="band-lede">Aşağıdaki her kare, telefonda çalışan oyunun kendisinden alındı - hiçbiri
+    temsili görsel ya da sahne kurgusu değil.</p>
   </div>
-
-  <h3>Hata bildiriminde nelere yer verin</h3>
-  <ul>
-    <li>Cihazınız ve iOS sürümünüz, örneğin “iPhone 14 Pro Max, iOS 26.1”</li>
-    <li>Uygulama sürümü - Ayarlar kartının altında yazıyor</li>
-    <li>Hangi sipariş numarasında olduğunuz ve ne olmasını beklediğiniz</li>
-    <li>Sorun gözle görülüyorsa bir ekran görüntüsü veya ekran kaydı</li>
-  </ul>
+  <div class="shots" role="group" aria-label="Oyundan ekran görüntüleri">
+    <figure>
+      <img src="media/tr/01_gameplay.webp" alt="Yarı dolu kutu ve bantta bekleyen oyuncaklar" width="540" height="1173" decoding="async">
+      <figcaption>Her oyuncağı yerine sürükleyin. Yolu kapatanı park tepsisine bırakın.</figcaption>
+    </figure>
+    <figure>
+      <img src="media/tr/02_ready.webp" alt="Ağzına kadar dolu kutu ve etkin kapat-gönder düğmesi" width="540" height="1173" loading="lazy" decoding="async">
+      <figcaption>Kutu dolduğunda kapatın ve teslimatı izleyin.</figcaption>
+    </figure>
+    <figure>
+      <img src="media/tr/03_result.webp" alt="Üç yıldız ve yeni dekor bildirimi gösteren sonuç kartı" width="540" height="1173" loading="lazy" decoding="async">
+      <figcaption>Üç yıldız: gönderdiniz, hasarsız ulaştı, sıkı paketlediniz.</figcaption>
+    </figure>
+    <figure>
+      <img src="media/tr/04_map.webp" alt="Tamamlanan siparişleri ve yıldızları gösteren sipariş haritası" width="540" height="1173" loading="lazy" decoding="async">
+      <figcaption>Dört bölümde 80 sipariş, sırayla açılıyor.</figcaption>
+    </figure>
+    <figure>
+      <img src="media/tr/05_start.webp" alt="Dekorlu deponun önündeki başlangıç kartı" width="540" height="1173" loading="lazy" decoding="async">
+      <figcaption>Yıldızlar biriktikçe deponuz dekorlarla doluyor.</figcaption>
+    </figure>
+    <figure>
+      <img src="media/tr/06_settings.webp" alt="Müzik, ses, titreşim ve dil anahtarlarını içeren ayarlar kartı" width="540" height="1173" loading="lazy" decoding="async">
+      <figcaption>Müzik, ses, titreşim ve dil; her birinin kendi anahtarı var.</figcaption>
+    </figure>
+  </div>
+  <div class="inner"><p class="rail-hint">Altı karenin tamamını görmek için sırayı kaydırın.</p></div>
 </section>
 
-<section aria-labelledby="faq">
-  <h2 id="faq">Sık sorulanlar</h2>
+<section class="band band-cream">
+  <div class="inner">
 
-  <details>
-    <summary>Oyun internet bağlantısı gerektirir mi?</summary>
-    <p>Hayır. Günlük Teslimat dahil her sipariş cihazınızda üretilir ve denetlenir. Uygulama hiç
-    çevrimiçi olmaz.</p>
-  </details>
+    <div class="feature">
+      <img src="media/tr/wide-01_gameplay.webp" alt="Tablet ekranında kutuya yerleştirilen oyuncaklar" width="760" height="1013" loading="lazy" decoding="async">
+      <div class="text">
+        <span class="tag">Bulmaca</span>
+        <h3>Tek bir temiz çözüm</h3>
+        <p>Her oyuncağı kutuya sürükleyin, son parça sığsın diye döndürün, yolu kapatanı park
+        tepsisine bırakın. Cam yük altında kırılır; ağırları camın üstünden uzak tutun ya da yanına
+        bir köpük yerleştirin.</p>
+        <p>Her siparişin doğrulanmış üç yıldızlı bir çözümü var, yani hiçbir bulmaca haksız değil;
+        kutu yanlış dolarsa <em>Geri al</em> ve <em>Tekrar paketle</em> her zaman orada.</p>
+      </div>
+    </div>
 
-  <details>
-    <summary>Reklam, uygulama içi satın alma veya abonelik var mı?</summary>
-    <p>Hiçbiri yok. Oyun ücretsiz ve tam: elle tasarlanmış 80 sipariş, dört bölüm ve her gün yeni
-    bir Günlük Teslimat; para ödeyerek açılan hiçbir şey yok.</p>
-  </details>
+    <div class="feature flip">
+      <img src="media/tr/wide-03_result.webp" alt="Üç altın yıldızlı sonuç kartı" width="760" height="1013" loading="lazy" decoding="async">
+      <div class="text">
+        <span class="tag">Teslimat</span>
+        <h3>Kararı yol verir</h3>
+        <p>Kutuyu kapatın ve yolculuğu izleyin: düz yol, engebeli yol ya da sarsıntılı yol. Her
+        şeyin sağ salim varıp varmayacağına şans değil, nasıl paketlediğiniz karar verir.</p>
+        <p>Gönderdiğiniz için bir, hasarsız ulaştığı için iki, sıkı paketlediğiniz için üç yıldız.
+        Toplam yıldız deponuzu süsler: saksı, atölye tabelası, forklift, teslimat aracı, neon
+        tabela.</p>
+      </div>
+    </div>
 
-  <details>
-    <summary>İlerlemem nerede tutuluyor, başka cihaza taşıyabilir miyim?</summary>
-    <p>O tek cihazdaki, uygulamaya ait özel alanda. Bu sürümde hesap ve iCloud eşitlemesi olmadığı
-    için ilerleme başka bir iPhone veya iPad'e geçmez; uygulamayı silmek ilerlemeyi de siler.</p>
-  </details>
+    <div class="feature">
+      <img src="media/tr/wide-04_map.webp" alt="Bölümlere ayrılmış sipariş haritası" width="760" height="1013" loading="lazy" decoding="async">
+      <div class="text">
+        <span class="tag">Kampanya</span>
+        <h3>Dört bölümde 80 sipariş</h3>
+        <p>Oyuncak Atölyesi, Yoğun Saat, Hediye Dükkânı ve Gece Vardiyası; her birinin kendi
+        görünümü ve kendi püf noktası var. Üstüne Günlük Teslimat o günün tarihine göre üretilir ve
+        çözücüyle denetlenir; her zaman üç yıldızlı bir cevabı olur. Seriyi bozmayın.</p>
+        <p>Baştan sona Türkçe ve İngilizce; dili, müziği, sesi ve titreşimi ayarlar kartından siz
+        seçiyorsunuz.</p>
+      </div>
+    </div>
 
-  <details>
-    <summary>Dili nasıl değiştiririm?</summary>
-    <p>Başlangıç kartındaki <strong>Ayarlar</strong>'ı açıp dil satırına dokunun. Otomatik, English
-    ve Türkçe arasında döner; Otomatik cihazınızın dilini izler.</p>
-  </details>
-
-  <details>
-    <summary>Müziği, sesi veya titreşimi kapatabilir miyim?</summary>
-    <p>Evet, her birinin Ayarlar kartında kendi anahtarı var. Oyun ekranının köşesindeki hoparlör
-    düğmesi hepsini bir kerede susturur.</p>
-  </details>
-
-  <details>
-    <summary>iPad'de çalışıyor mu?</summary>
-    <p>Evet. Fragile evrensel bir uygulama; iOS 15 ve sonrasında hem iPhone hem iPad'de portre
-    modunda çalışır.</p>
-  </details>
-
-  <details>
-    <summary>Bir siparişte tıkandım, kesin çözümü var mı?</summary>
-    <p>Her siparişin doğrulanmış üç yıldızlı bir çözümü var; Günlük Teslimat da sunulmadan önce
-    çözücüyle denetlenir. Kutu yanlış dolarsa kart <em>Geri al</em> ve <em>Tekrar paketle</em>
-    sunar - çıkamayacağınız bir çıkmaz yok.</p>
-  </details>
+  </div>
 </section>
 
-<section aria-labelledby="credits">
-  <h2 id="credits">Künye</h2>
-  <p>Yazı tipleri: <strong>Titan One</strong> ve <strong>Sniglet</strong>,
-  <a href="https://openfontlicense.org" rel="noopener">SIL Open Font License 1.1</a> kapsamında
-  kullanılıyor. Bütün görseller özgün; müzik ve ses efektleri oyunun kendisi tarafından
-  üretiliyor.</p>
-  <p>Bu sayfa hiçbir yerden yazı tipi, betik, analitik veya çerez yüklemez ve kendi çerezini de
-  yazmaz - uygulamanın kendisi için geçerli olan ölçüt burada da geçerli.</p>
+<section id="privacy" class="band band-paper">
+  <div class="prose">
+    <h2>Gizlilik Politikası</h2>
+    <p class="stamp">Sürüm 1.0.0 · Son güncelleme 22 Ağustos 2026</p>
+    <p><strong>Fragile hiçbir kişisel veriyi toplamaz, iletmez, satmaz veya paylaşmaz.</strong>
+    Uygulamada hesap, giriş, reklam, analitik servis ve üçüncü taraf kod bulunmaz; hiçbir türde ağ
+    isteği yapmaz.</p>
+
+    <h3>Sorumlu kim</h3>
+    <p>Fragile'ı <strong>Halil Cosdu</strong> geliştirir ve yayınlar; bireysel bir geliştiricidir.
+    Bu politikayla ilgili her konu için
+    <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a> adresine yazabilirsiniz.</p>
+
+    <h3>Uygulamanın cihazınızda tuttukları</h3>
+    <p>Hepsi yalnızca Fragile'ın okuyabildiği, uygulamaya ait özel alanda kalır:</p>
+    <table>
+      <tbody>
+        <tr><th>İlerlemeniz</th><td>Tamamlanan siparişler, yıldızlar, günlük seri ve hangi ipuçlarını gördüğünüz</td></tr>
+        <tr><th>Ayarlarınız</th><td>Müzik, ses efektleri, titreşim ve dil</td></tr>
+        <tr><th>Yerel oyun günlüğü</th><td>Bir sorunun cihaz üzerinde teşhis edilebilmesi için yazılan oyun olayları. Kişisel bilgi içermez, boyutu sınırlıdır ve hiçbir yere yüklenmez.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Cihazınızdan çıkanlar</h3>
+    <p>Hiçbir şey. Uygulamada ağ kodu, reklam veya analitik SDK'sı ve herhangi bir izleme yoktur;
+    yani gönderilecek bir veri de, gideceği bir yer de yok. Oyun uçak modunda baştan sona
+    oynanabilir.</p>
+
+    <h3>Üçüncü taraflar</h3>
+    <p>Yok. Fragile'ın reklam ortağı, analitik sağlayıcısı, çökme bildirimi servisi, sosyal medya
+    veya giriş entegrasyonu bulunmaz. İki yazı tipi uygulamanın içine gömülüdür; çalışma anında
+    hiçbir şey indirilmez.</p>
+
+    <h3>Çocuklar</h3>
+    <p>Oyunun yaş sınırı 4+ ve her yaşa uygundur. Reklam, satın alma, sohbet, kullanıcı içeriği ve
+    uygulama dışına çıkan bağlantı içermez; çocuklar dahil hiç kimseden veri toplamaz.</p>
+
+    <h3>Haklarınız</h3>
+    <p>Hiçbir kişisel veri toplanmadığı ve iletilmediği için 6698 sayılı KVKK ile GDPR kapsamında
+    hakkınızda erişilebilecek, düzeltilebilecek, taşınabilecek veya silinebilecek bir kaydımız
+    bulunmuyor. Yukarıda anlatılan veriler cihazınızda durur ve sizin denetimindedir: uygulamayı
+    silmeniz hepsini kaldırır, başka hiçbir yerde kopyası yoktur.</p>
+
+    <h3>Bu politikadaki değişiklikler</h3>
+    <p>Politika değişirse bu sayfa ve yukarıdaki tarih güncellenir, esaslı bir değişiklik olursa
+    uygulamanın sürüm notlarında da belirtilir. Bu politikanın veri toplayan bir sürümü
+    olmayacak.</p>
+  </div>
+</section>
+
+<section id="support" class="band band-cream">
+  <div class="prose">
+    <h2>Destek</h2>
+    <p>Soru, hata bildirimi ve yeni sipariş fikirleri; hepsi doğrudan oyunu yapan kişiye ulaşır.</p>
+    <div class="contact">
+      <a class="mail" href="mailto:cosduhalil@gmail.com?subject=Fragile%20destek">E-posta gönder</a>
+      <p>cosduhalil@gmail.com · Genellikle iki gün içinde yanıtlıyorum.</p>
+    </div>
+
+    <h3>Hata bildiriminde nelere yer verin</h3>
+    <ul class="plain">
+      <li>Cihazınız ve iOS sürümünüz, örneğin “iPhone 14 Pro Max, iOS 26.1”</li>
+      <li>Uygulama sürümü - Ayarlar kartının altında yazıyor</li>
+      <li>Hangi sipariş numarasında olduğunuz ve ne olmasını beklediğiniz</li>
+      <li>Sorun gözle görülüyorsa bir ekran görüntüsü veya ekran kaydı</li>
+    </ul>
+
+    <h3>Sık sorulanlar</h3>
+
+    <details>
+      <summary>Oyun internet bağlantısı gerektirir mi?</summary>
+      <p>Hayır. Günlük Teslimat dahil her sipariş cihazınızda üretilir ve denetlenir. Uygulama hiç
+      çevrimiçi olmaz.</p>
+    </details>
+
+    <details>
+      <summary>Reklam, uygulama içi satın alma veya abonelik var mı?</summary>
+      <p>Hiçbiri yok. Oyun ücretsiz ve tam: elle tasarlanmış 80 sipariş, dört bölüm ve her gün yeni
+      bir Günlük Teslimat; para ödeyerek açılan hiçbir şey yok.</p>
+    </details>
+
+    <details>
+      <summary>İlerlemem nerede tutuluyor, başka cihaza taşıyabilir miyim?</summary>
+      <p>O tek cihazdaki, uygulamaya ait özel alanda. Bu sürümde hesap ve iCloud eşitlemesi
+      olmadığı için ilerleme başka bir iPhone veya iPad'e geçmez; uygulamayı silmek ilerlemeyi de
+      siler.</p>
+    </details>
+
+    <details>
+      <summary>Dili nasıl değiştiririm?</summary>
+      <p>Başlangıç kartındaki <strong>Ayarlar</strong>'ı açıp dil satırına dokunun. Otomatik,
+      English ve Türkçe arasında döner; Otomatik cihazınızın dilini izler.</p>
+    </details>
+
+    <details>
+      <summary>Müziği, sesi veya titreşimi kapatabilir miyim?</summary>
+      <p>Evet, her birinin Ayarlar kartında kendi anahtarı var. Oyun ekranının köşesindeki hoparlör
+      düğmesi hepsini bir kerede susturur.</p>
+    </details>
+
+    <details>
+      <summary>iPad'de çalışıyor mu?</summary>
+      <p>Evet. Fragile evrensel bir uygulama; iOS 15 ve sonrasında hem iPhone hem iPad'de portre
+      modunda çalışır.</p>
+    </details>
+
+    <details>
+      <summary>Bir siparişte tıkandım, kesin çözümü var mı?</summary>
+      <p>Her siparişin doğrulanmış üç yıldızlı bir çözümü var; Günlük Teslimat da sunulmadan önce
+      çözücüyle denetlenir. Kutu yanlış dolarsa kart <em>Geri al</em> ve <em>Tekrar paketle</em>
+      sunar, yani çıkamayacağınız bir çıkmaz yok.</p>
+    </details>
+
+    <h3>Künye</h3>
+    <p>Yazı tipleri: <strong>Titan One</strong> ve <strong>Sniglet</strong>,
+    <a href="https://openfontlicense.org" rel="noopener">SIL Open Font License 1.1</a> kapsamında
+    kullanılıyor. Bütün görseller özgün; müzik ve ses efektleri oyunun kendisi tarafından
+    üretiliyor.</p>
+    <p>Bu site hiçbir yerden yazı tipi, betik, analitik veya çerez yüklemez ve kendi çerezini de
+    yazmaz - uygulamanın kendisi için geçerli olan ölçüt burada da geçerli.</p>
+  </div>
 </section>
 
 </main>
 
 <footer>
+  <img src="wordmark.png" alt="Fragile" width="556" height="168">
   <p>© 2026 Halil Cosdu · <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a> ·
+  <a href="#privacy">Gizlilik</a> · <a href="#support">Destek</a> ·
   <a href="./" lang="en" hreflang="en">English</a></p>
 </footer>
 
-</div>
 </body>
 </html>

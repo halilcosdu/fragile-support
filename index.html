@@ -3,122 +3,284 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fragile — Privacy Policy &amp; Support</title>
+<title>Fragile - Privacy &amp; Support</title>
+<meta name="description" content="Privacy policy and support for Fragile, a packing puzzle for iPhone and iPad. No data collected, no account, no ads, works offline.">
+<meta name="theme-color" content="#2A1F3D">
+<link rel="icon" href="icon.png" sizes="256x256">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="canonical" href="https://halilcosdu.github.io/fragile-support/">
+<link rel="alternate" hreflang="en" href="https://halilcosdu.github.io/fragile-support/">
+<link rel="alternate" hreflang="tr" href="https://halilcosdu.github.io/fragile-support/tr.html">
+<link rel="alternate" hreflang="x-default" href="https://halilcosdu.github.io/fragile-support/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fragile - Privacy &amp; Support">
+<meta property="og:description" content="No data collected, no account, no ads. Fragile works entirely offline.">
+<meta property="og:image" content="https://halilcosdu.github.io/fragile-support/icon.png">
 <style>
-  :root { --ink:#2A1F3D; --card:#FFF6E8; --orange:#FF7A1A; --body:#4a4358; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--ink); color:var(--body);
-         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  main { max-width:44rem; margin:0 auto; padding:2rem 1.25rem 4rem; }
-  header { text-align:center; padding:2.5rem 0 1.5rem; }
-  h1 { color:#FFD9A8; font-size:2.1rem; letter-spacing:.04em; margin:0; }
-  header p { color:#b3a8c9; margin:.4rem 0 0; }
-  section { background:var(--card); border-radius:18px; padding:1.5rem 1.6rem; margin:1.25rem 0; }
-  h2 { color:var(--ink); font-size:1.25rem; margin:0 0 .6rem; }
-  h3 { color:var(--ink); font-size:1rem; margin:1.2rem 0 .3rem; }
-  a { color:#C2571A; }
-  ul { padding-left:1.2rem; }
-  li { margin:.25rem 0; }
-  .lang { text-align:center; color:#b3a8c9; font-size:.9rem; padding-bottom:.5rem; }
-  footer { text-align:center; color:#8d82a5; font-size:.85rem; padding-top:1rem; }
+  :root {
+    --ink: #2A1F3D;
+    --ink-soft: #372A50;
+    --card: #FFF6E8;
+    --card-edge: #E8D9C2;
+    --text: #453C57;
+    --muted: #6C6280;
+    --gold: #FFD9A8;
+    --orange: #FF7A1A;
+    --orange-deep: #C2571A;
+    --lilac: #B3A8C9;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--lilac);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* a soft glow behind the header, so the page does not read as a flat wall of ink */
+    background-image: radial-gradient(120% 60% at 50% 0%, #3B2C55 0%, #2A1F3D 60%);
+    background-repeat: no-repeat;
+  }
+  .skip {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--card); color: var(--ink); padding: .7rem 1rem; border-radius: 0 0 12px 0; z-index: 5;
+  }
+  .skip:focus { left: 0; }
+  .wrap { max-width: 47rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  header { text-align: center; padding: 2.75rem 0 .5rem; }
+  header img { width: min(278px, 72vw); height: auto; display: block; margin: 0 auto; }
+  .eyebrow { color: var(--lilac); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; margin: .9rem 0 0; }
+  h1 { color: var(--gold); font-size: clamp(1.5rem, 5vw, 2rem); margin: .35rem 0 0; letter-spacing: .01em; text-wrap: balance; }
+  .updated { color: #8D82A5; font-size: .9rem; margin: .35rem 0 0; }
+
+  nav.langs { display: flex; justify-content: center; gap: .5rem; margin: 1.4rem 0 .25rem; }
+  nav.langs a {
+    display: inline-block; padding: .42rem 1rem; border-radius: 999px;
+    color: var(--gold); text-decoration: none; font-size: .92rem; font-weight: 600;
+    border: 1px solid rgba(255, 217, 168, .32);
+  }
+  nav.langs a[aria-current="page"] { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+  nav.langs a:hover { border-color: var(--gold); }
+
+  .glance { display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem; margin: 1.6rem 0 0; }
+  .glance div {
+    background: rgba(255, 246, 232, .07); border: 1px solid rgba(255, 246, 232, .14);
+    border-radius: 14px; padding: .8rem .9rem; color: #E9E2F3; font-size: .92rem; font-weight: 600;
+    text-wrap: balance;
+  }
+  .glance span { display: block; color: var(--lilac); font-weight: 400; font-size: .85rem; margin-top: .1rem; }
+
+  section {
+    background: var(--card); color: var(--text);
+    border-radius: 20px; padding: 1.6rem 1.7rem;
+    margin: 1.5rem 0 0; box-shadow: 0 6px 0 var(--card-edge);
+  }
+  section > :first-child { margin-top: 0; }
+  section > :last-child { margin-bottom: 0; }
+  h2 { color: var(--ink); font-size: 1.3rem; margin: 0 0 .8rem; }
+  h3 { color: var(--ink); font-size: 1.02rem; margin: 1.5rem 0 .3rem; }
+  p { margin: .6rem 0; }
+  ul { padding-left: 1.15rem; margin: .5rem 0; }
+  li { margin: .3rem 0; }
+  a { color: var(--orange-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--orange); }
+  strong { color: var(--ink); }
+  .lede { font-size: 1.06rem; }
+
+  .contact {
+    display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.1rem;
+    background: #FFEFD8; border: 1px solid var(--card-edge); border-radius: 16px;
+    padding: 1rem 1.15rem; margin: 1rem 0 0;
+  }
+  .contact a.mail {
+    background: var(--orange); color: #fff; text-decoration: none; font-weight: 700;
+    padding: .6rem 1.1rem; border-radius: 12px; box-shadow: 0 4px 0 var(--orange-deep);
+  }
+  .contact a.mail:hover { color: #fff; }
+  .contact p { margin: 0; font-size: .95rem; color: var(--muted); }
+
+  details { border-top: 1px solid var(--card-edge); padding: .2rem 0; }
+  details:first-of-type { border-top: 0; }
+  summary { cursor: pointer; padding: .7rem 0; font-weight: 600; color: var(--ink); list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; float: right; color: var(--orange-deep); font-weight: 700; }
+  details[open] summary::after { content: "\2212"; }
+  details p { margin: 0 0 .8rem; }
+
+  table { width: 100%; border-collapse: collapse; margin: .8rem 0 0; font-size: .96rem; }
+  th, td { text-align: left; padding: .55rem .2rem; border-bottom: 1px solid var(--card-edge); vertical-align: top; }
+  th { color: var(--ink); width: 45%; }
+  td { color: var(--muted); }
+
+  footer { text-align: center; color: #8D82A5; font-size: .86rem; padding: 2rem 0 0; }
+  footer a { color: var(--gold); }
+
+  @media (min-width: 40rem) { .glance { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 34rem) {
+    /* the two-column table gets cramped on a phone, so each row stacks instead */
+    section { padding: 1.3rem 1.15rem; }
+    th, td { display: block; width: auto; padding: .3rem 0; }
+    th { border-bottom: 0; padding-top: .75rem; }
+    td { padding-bottom: .75rem; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    section { box-shadow: none; border: 1px solid #ccc; }
+    nav.langs, .skip { display: none; }
+  }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
 <header>
-  <h1>Fragile</h1>
-  <p>Privacy Policy &amp; Support · Gizlilik Politikası ve Destek</p>
+  <img src="wordmark.png" alt="Fragile" width="556" height="168">
+  <p class="eyebrow">Packing Puzzle for iPhone &amp; iPad</p>
+  <h1>Privacy &amp; Support</h1>
+  <p class="updated">Version 1.0.0 · Last updated 22 August 2026</p>
+  <nav class="langs" aria-label="Language">
+    <a href="./" aria-current="page" lang="en">English</a>
+    <a href="tr.html" lang="tr" hreflang="tr">Türkçe</a>
+  </nav>
+  <div class="glance">
+    <div>No data collected<span>Nothing leaves your device</span></div>
+    <div>No account<span>Nothing to sign up for</span></div>
+    <div>No ads or purchases<span>The whole game, once</span></div>
+    <div>Works offline<span>No network access at all</span></div>
+  </div>
 </header>
-<main>
 
-<section>
-  <h2>Privacy Policy</h2>
-  <p><strong>Last updated: 21 August 2026</strong></p>
-  <p>Fragile is a single-player puzzle game published by Halil Cosdu. It does not collect,
-  transmit or sell any personal data. There is no account, no login, no advertising and no
-  analytics service.</p>
+<main id="main">
 
-  <h3>What the app stores</h3>
-  <ul>
-    <li>Your progress (completed orders, stars, daily streak) and your settings (music, sound,
-      haptics, language) are written to a file inside the app's own storage on your device.</li>
-    <li>A local gameplay log is written to the same private storage to help diagnose problems.
-      It contains no personal information and is never uploaded.</li>
-  </ul>
+<section aria-labelledby="privacy">
+  <h2 id="privacy">Privacy Policy</h2>
+  <p class="lede">Fragile does not collect, transmit, sell or share any personal data. There is no
+  account, no login, no advertising, no analytics service and no third-party code in the app. It
+  makes no network requests of any kind.</p>
+
+  <h3>Who is responsible</h3>
+  <p>Fragile is developed and published by <strong>Halil Cosdu</strong>, an individual developer.
+  For anything about this policy, write to
+  <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a>.</p>
+
+  <h3>What the app keeps on your device</h3>
+  <p>All of it stays inside the app's own private storage, which only Fragile can read:</p>
+  <table>
+    <tbody>
+      <tr><th>Your progress</th><td>Completed orders, stars, the daily streak and which tutorial hints you have seen</td></tr>
+      <tr><th>Your settings</th><td>Music, sound effects, haptics and language</td></tr>
+      <tr><th>A local play log</th><td>Gameplay events written to a file so a problem can be diagnosed on the device. It holds no personal information, is capped in size and is never uploaded.</td></tr>
+    </tbody>
+  </table>
 
   <h3>What leaves your device</h3>
-  <p>Nothing. The app makes no network requests and contains no third-party SDKs. It works
-  entirely offline.</p>
+  <p>Nothing. The app contains no networking code, no advertising or analytics SDK and no tracking
+  of any kind, so there is nothing to send and nowhere for it to go. The game is fully playable in
+  airplane mode.</p>
+
+  <h3>Third parties</h3>
+  <p>There are none. Fragile has no advertising partners, no analytics provider, no crash reporter
+  and no social or login integrations. Its two typefaces are embedded in the app; nothing is
+  fetched at runtime.</p>
 
   <h3>Children</h3>
-  <p>The game is suitable for all ages, contains no advertising, no purchases and no links out of
-  the app, and collects nothing from anyone, including children.</p>
+  <p>The game is rated 4+ and suitable for all ages. It contains no advertising, no purchases, no
+  chat, no user-generated content and no links out of the app, and it collects nothing from anyone,
+  children included.</p>
 
-  <h3>Deleting your data</h3>
-  <p>Deleting the app removes all of it from your device. There is no copy anywhere else.</p>
+  <h3>Your rights</h3>
+  <p>Because no personal data is ever collected or transmitted, there is nothing held about you to
+  access, correct, export or erase. The data described above lives on your device and is under your
+  control: deleting the app removes all of it, and there is no copy anywhere else.</p>
 
-  <h3>Contact</h3>
-  <p><a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a></p>
+  <h3>Changes to this policy</h3>
+  <p>If this policy changes, this page and the date at the top are updated, and anything material is
+  mentioned in the app's release notes. There is no version of this policy that collects data.</p>
 </section>
 
-<section>
-  <h2>Gizlilik Politikası</h2>
-  <p><strong>Son güncelleme: 21 Ağustos 2026</strong></p>
-  <p>Fragile, Halil Cosdu tarafından yayınlanan tek kişilik bir bulmaca oyunudur. Hiçbir kişisel
-  veri toplamaz, iletmez veya satmaz. Hesap, giriş, reklam ve analitik servisi yoktur.</p>
+<section id="support" aria-labelledby="support-title">
+  <h2 id="support-title">Support</h2>
+  <p>Questions, bug reports and ideas for new orders are all welcome; they go straight to the
+  person who made the game.</p>
+  <div class="contact">
+    <a class="mail" href="mailto:cosduhalil@gmail.com?subject=Fragile%20support">Email support</a>
+    <p>cosduhalil@gmail.com · I usually reply within a couple of days.</p>
+  </div>
 
-  <h3>Uygulamanın sakladıkları</h3>
+  <h3>What to include in a bug report</h3>
   <ul>
-    <li>İlerlemeniz (tamamlanan siparişler, yıldızlar, günlük seri) ve ayarlarınız (müzik, ses,
-      titreşim, dil) cihazınızdaki uygulamaya ait özel alana yazılır.</li>
-    <li>Sorun teşhisi için aynı özel alana yerel bir oyun günlüğü yazılır. Kişisel bilgi içermez
-      ve hiçbir yere yüklenmez.</li>
-  </ul>
-
-  <h3>Cihazdan çıkanlar</h3>
-  <p>Hiçbir şey. Uygulama hiçbir ağ isteği yapmaz ve üçüncü taraf SDK içermez; tamamen çevrimdışı
-  çalışır.</p>
-
-  <h3>Çocuklar</h3>
-  <p>Oyun her yaşa uygundur; reklam, satın alma ve uygulama dışına çıkan bağlantı içermez, hiç
-  kimseden -çocuklar dahil- veri toplamaz.</p>
-
-  <h3>Verilerinizi silmek</h3>
-  <p>Uygulamayı silmeniz cihazınızdaki her şeyi kaldırır. Başka hiçbir yerde kopyası yoktur.</p>
-
-  <h3>İletişim</h3>
-  <p><a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a></p>
-</section>
-
-<section id="support">
-  <h2>Support · Destek</h2>
-  <p>Questions, bugs or ideas: <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a>.
-  Please say which device and iOS version you are using, and which order number you were playing.</p>
-  <p>Soru, hata veya öneri: <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a>.
-  Hangi cihaz ve iOS sürümünü kullandığınızı, hangi sipariş numarasında olduğunuzu yazarsanız
-  daha hızlı yardımcı olabilirim.</p>
-
-  <h3>Frequently asked · Sık sorulanlar</h3>
-  <ul>
-    <li><strong>Does it need the internet?</strong> No. Everything works offline.
-      <em>İnternet gerekir mi?</em> Hayır, her şey çevrimdışı çalışır.</li>
-    <li><strong>Are there ads or purchases?</strong> None at all.
-      <em>Reklam veya satın alma var mı?</em> Hiç yok.</li>
-    <li><strong>I lost my progress.</strong> Progress lives only on the device; deleting the app
-      or the device removes it. <em>İlerlemem kayboldu.</em> İlerleme yalnız cihazda tutulur;
-      uygulamayı silmek onu da siler.</li>
-    <li><strong>How do I change the language?</strong> Settings on the start card: Automatic,
-      English or Türkçe. <em>Dili nasıl değiştiririm?</em> Başlangıç kartındaki Ayarlar'dan.</li>
+    <li>Your device and iOS version, for example “iPhone 14 Pro Max, iOS 26.1”</li>
+    <li>The app version, shown at the bottom of the Settings card</li>
+    <li>The order number you were playing, and what you expected to happen</li>
+    <li>A screenshot or a screen recording, if the problem is something you can see</li>
   </ul>
 </section>
 
-<section>
-  <h2>Credits</h2>
-  <p>Fonts: <strong>Titan One</strong> and <strong>Sniglet</strong>, used under the
-  <a href="https://openfontlicense.org">SIL Open Font License 1.1</a>. Music and sound effects are
-  generated by the game itself. All artwork is original.</p>
+<section aria-labelledby="faq">
+  <h2 id="faq">Frequently asked</h2>
+
+  <details>
+    <summary>Does the game need an internet connection?</summary>
+    <p>No. Every order, including the Daily Delivery, is generated and checked on your device. The
+    app never goes online.</p>
+  </details>
+
+  <details>
+    <summary>Are there ads, in-app purchases or subscriptions?</summary>
+    <p>None. The game is free and complete: 80 hand-made orders, four chapters and a new Daily
+    Delivery every day, with nothing to unlock by paying.</p>
+  </details>
+
+  <details>
+    <summary>Where is my progress stored, and can I move it to another device?</summary>
+    <p>In the app's private storage on that one device. There is no account and no iCloud sync in
+    this version, so progress does not follow you to another iPhone or iPad, and deleting the app
+    deletes it.</p>
+  </details>
+
+  <details>
+    <summary>How do I change the language?</summary>
+    <p>Open <strong>Settings</strong> on the start card and tap the language row. It cycles through
+    Automatic, English and Türkçe; Automatic follows your device language.</p>
+  </details>
+
+  <details>
+    <summary>Can I turn off the music, the sound or the haptics?</summary>
+    <p>Yes, each one has its own switch on the Settings card. The speaker button in the corner of
+    the game screen mutes everything at once.</p>
+  </details>
+
+  <details>
+    <summary>Does it run on iPad?</summary>
+    <p>Yes. Fragile is a universal app and runs in portrait on both iPhone and iPad, from iOS 15
+    onwards.</p>
+  </details>
+
+  <details>
+    <summary>I am stuck on an order. Is it definitely solvable?</summary>
+    <p>Every order ships with a verified three-star solution, and the Daily Delivery is checked by a
+    solver before it is offered. If the box fills up wrong, the card offers <em>Undo last</em> and
+    <em>Pack again</em> - the puzzle is never a dead end you cannot leave.</p>
+  </details>
 </section>
 
-<footer>© 2026 Halil Cosdu</footer>
+<section aria-labelledby="credits">
+  <h2 id="credits">Credits</h2>
+  <p>Typefaces: <strong>Titan One</strong> and <strong>Sniglet</strong>, used under the
+  <a href="https://openfontlicense.org" rel="noopener">SIL Open Font License 1.1</a>. All artwork is
+  original, and the music and sound effects are generated by the game itself.</p>
+  <p>This page loads no fonts, scripts, analytics or cookies from anywhere, and sets no cookies of
+  its own - the same standard the app is held to.</p>
+</section>
+
 </main>
+
+<footer>
+  <p>© 2026 Halil Cosdu · <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a> ·
+  <a href="tr.html" lang="tr" hreflang="tr">Türkçe</a></p>
+</footer>
+
+</div>
 </body>
 </html>
